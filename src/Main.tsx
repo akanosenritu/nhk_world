@@ -6,7 +6,7 @@ import {Container} from "@mui/material"
 
 const Main: React.FC = () => {
   const today = format(
-    sub(new Date, {hours: 4}), 
+    sub(new Date(), {hours: 4}), 
     "yyyy-MM-dd"
     )
   return <Container maxWidth="md">

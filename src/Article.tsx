@@ -7,7 +7,7 @@ type Props = {
   title: string,
 }
 
-const constructURL = (date: string, title: string) => `https://nhkworld.blob.core.windows.net/articles/${date}_${title}.txt`
+const constructURL = (date: string, title: string) => `https://nhkworld.blob.core.windows.net/articles/${date}_${encodeURIComponent(title)}.txt`
 const fetcher = (url: string) => fetch(url).then((res) => res.text());
 
 const Article: React.FC<Props> = props => {
